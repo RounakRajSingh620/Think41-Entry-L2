@@ -1,55 +1,60 @@
 .chat-container {
   max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #100f0f;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  background-color: #ffffff;
+  font-family: sans-serif;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .chat-box {
   height: 400px;
   overflow-y: auto;
-  background: white;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  margin-bottom: 1rem;
 }
 
 .user-msg {
   text-align: right;
-  margin: 10px;
-  color: blue;
+  margin: 0.5rem 0;
+  color: #333;
 }
 
 .ai-msg {
   text-align: left;
-  margin: 10px;
-  color: green;
+  margin: 0.5rem 0;
+  color: #0c4a6e;
 }
 
 .input-box {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
-input {
+input[type="text"] {
   flex: 1;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid gray;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #0077ff;
+  padding: 0.6rem 1rem;
+  background-color: #0ea5e9;
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #0284c7;
 }
