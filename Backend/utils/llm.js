@@ -1,21 +1,13 @@
 const axios = require("axios");
 
-async function getLLMResponse(userMessage) {
+async function getLLMResponse(messages) {
   const apiKey = process.env.GROQ_API_KEY;
   const url = "https://api.groq.com/openai/v1/chat/completions";
 
   const payload = {
     model: "llama3-70b-8192",
-    messages: [
-      {
-        role: "system",
-        content: "You are a helpful e-commerce assistant."
-      },
-      {
-        role: "user",
-        content: userMessage
-      }
-    ]
+    messages,
+    temperature: 0.7
   };
 
   try {
