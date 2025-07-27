@@ -20,13 +20,14 @@ services:
     volumes:
       - mongo_data:/data/db
 
-frontend:
+  frontend:
     build: ./Frontend
     ports:
-      - "5173:5173"
+      - "5173:80" # Map container's port 80 to host's 5173
     environment:
       - VITE_API_URL=http://localhost:5000
+    depends_on:
+      - backend
 
 volumes:
   mongo_data:
-   
